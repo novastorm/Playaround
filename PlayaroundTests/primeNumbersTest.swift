@@ -16,16 +16,38 @@ extension Int {
     }
     
     var isPrime: Bool {
-        let range = 2 ... Int(Double(self).squareRoot())
+        if self == 1 {
+            return true
+        }
+        
+        var upper = Int(Double(self).squareRoot())
+        if upper < self {
+            upper = self
+        }
+        
+        let range = 2 ... upper
         return range.filter({ self % $0 == 0 }).count == 1
     }
 }
 
 class primeNumbersTest: XCTestCase {
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func test7() {
+        let target = 7
+        print(Algorithms.primeNumbers(upTo: target))
+        XCTAssert(Algorithms.primeNumbers(upTo: target).map{$0.isPrime}.filter({$0 == false}).isEmpty)
+    }
+
+    func test10() {
+        let target = 10
+        print(Algorithms.primeNumbers(upTo: target))
+        XCTAssert(Algorithms.primeNumbers(upTo: target).map{$0.isPrime}.filter({$0 == false}).isEmpty)
+    }
+
+    func test100() {
+        let target = 100
+        print(Algorithms.primeNumbers(upTo: target))
+        XCTAssert(Algorithms.primeNumbers(upTo: target).map{$0.isPrime}.filter({$0 == false}).isEmpty)
     }
 
 }
