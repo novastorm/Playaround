@@ -8,12 +8,6 @@
 
 import Foundation
 
-//public typealias Heap<Element> = Array<Element> where Element : HeapItem
-
-public protocol HeapItem {
-    func hasPriorityOver(_ other: Self) -> Bool
-}
-
 public protocol HeapProtocol {
     
     associatedtype Element
@@ -32,9 +26,11 @@ public protocol HeapProtocol {
     mutating func removeAll()
 }
 
-struct Heap<Element> : HeapProtocol where Element : HeapItem {
+public struct Heap<Element> : HeapProtocol {
     
     fileprivate var heap = Array<Element>()
+    
+    private var hasPriority: (Element, Element) -> Bool
     
     public var isEmpty: Bool {
         return heap.isEmpty
@@ -48,9 +44,12 @@ struct Heap<Element> : HeapProtocol where Element : HeapItem {
         return heap.first
     }
 
-    init() {}
+    public init(sort: @escaping (Element, Element) -> Bool) {
+        hasPriority = sort
+    }
 
-    init(_ items: [Element]) {
+    public init(_ items: [Element], sort: @escaping (Element, Element) -> Bool) {
+        hasPriority = sort
         for e in items {
             enqueue(e)
         }
@@ -96,7 +95,7 @@ struct Heap<Element> : HeapProtocol where Element : HeapItem {
         enqueue(item)
     }
     
-    internal func parentIndex(ofIndex i: Int) -> Int {
+    @inline(__always) internal func parentIndex(ofIndex i: Int) -> Int {
         return (i - 1) / 2
     }
     
@@ -116,7 +115,7 @@ struct Heap<Element> : HeapProtocol where Element : HeapItem {
         var walkerIndex = index
         var parentIndex = self.parentIndex(ofIndex: walkerIndex)
         
-        while walkerIndex > 0 && item.hasPriorityOver(heap[parentIndex]) {
+        while walkerIndex > 0 && hasPriority(item, heap[parentIndex]) {
             heap[walkerIndex] = heap[parentIndex]
             walkerIndex = parentIndex
             parentIndex = self.parentIndex(ofIndex: walkerIndex)
@@ -135,10 +134,10 @@ struct Heap<Element> : HeapProtocol where Element : HeapItem {
         
         var walkerIndex = startIndex
         
-        if leftChildIndex < endIndex && heap[leftChildIndex].hasPriorityOver(heap[walkerIndex]) {
+        if leftChildIndex < endIndex && hasPriority(heap[leftChildIndex], heap[walkerIndex]) {
             walkerIndex = leftChildIndex
         }
-        if rightChildIndex < endIndex && heap[rightChildIndex].hasPriorityOver(heap[walkerIndex]) {
+        if rightChildIndex < endIndex && hasPriority(heap[rightChildIndex], heap[walkerIndex]) {
             walkerIndex = rightChildIndex
         }
         
@@ -156,7 +155,7 @@ struct Heap<Element> : HeapProtocol where Element : HeapItem {
 
 extension Heap : Equatable where Element : Equatable {
     
-    static func == (lhs: Heap<Element>, rhs: Heap<Element>) -> Bool {
+    public static func == (lhs: Heap<Element>, rhs: Heap<Element>) -> Bool {
         return lhs.heap == rhs.heap
     }
     static func == (lhs: Array<Element>, rhs: Heap<Element>) -> Bool {
@@ -179,7 +178,7 @@ extension Heap : Equatable where Element : Equatable {
 }
 
 extension Heap : CustomStringConvertible where Element : StringProtocol {
-    var description: String {
+    public var description: String {
         let results = heap.reversed().joined(separator: "\n")
         return results
     }

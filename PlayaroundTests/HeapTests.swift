@@ -9,11 +9,6 @@
 import XCTest
 @testable import Playaround
 
-extension Int : HeapItem {
-    public func hasPriorityOver(_ other: Int) -> Bool {
-        return self < other
-    }
-}
 
 class HeapTests: XCTestCase {
 
@@ -21,7 +16,7 @@ class HeapTests: XCTestCase {
     var heap: Heap<TestType>?
     
     override func setUp() {
-        heap = Heap<TestType>()
+        heap = Heap<TestType>(sort: <)
     }
 
     override func tearDown() {
