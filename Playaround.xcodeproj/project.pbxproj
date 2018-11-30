@@ -24,6 +24,8 @@
 		3EBA915C21ACF0E0002537E0 /* TextDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBA915B21ACF0E0002537E0 /* TextDiff.swift */; };
 		3EE6437D21B12E4400DC5648 /* editDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE6437C21B12E4400DC5648 /* editDistance.swift */; };
 		3EE6437F21B12E6F00DC5648 /* editDistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE6437E21B12E6F00DC5648 /* editDistanceTests.swift */; };
+		3EE6438121B1349100DC5648 /* greatestCommonDenominator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE6438021B1349100DC5648 /* greatestCommonDenominator.swift */; };
+		3EE6438321B1351100DC5648 /* gcdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE6438221B1351100DC5648 /* gcdTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		3EBA915B21ACF0E0002537E0 /* TextDiff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDiff.swift; sourceTree = "<group>"; };
 		3EE6437C21B12E4400DC5648 /* editDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editDistance.swift; sourceTree = "<group>"; };
 		3EE6437E21B12E6F00DC5648 /* editDistanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editDistanceTests.swift; sourceTree = "<group>"; };
+		3EE6438021B1349100DC5648 /* greatestCommonDenominator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = greatestCommonDenominator.swift; sourceTree = "<group>"; };
+		3EE6438221B1351100DC5648 /* gcdTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gcdTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 				3EBA915B21ACF0E0002537E0 /* TextDiff.swift */,
 				3E2E5D3521AD360F0070AAF0 /* primeNumbers.swift */,
 				3EE6437C21B12E4400DC5648 /* editDistance.swift */,
+				3EE6438021B1349100DC5648 /* greatestCommonDenominator.swift */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 				3E2A1F4621ACD3DC0026565F /* LongestCommonSubstringTests.swift */,
 				3E2E5D3721AD39130070AAF0 /* primeNumbersTest.swift */,
 				3EE6437E21B12E6F00DC5648 /* editDistanceTests.swift */,
+				3EE6438221B1351100DC5648 /* gcdTests.swift */,
 			);
 			path = PlayaroundTests;
 			sourceTree = "<group>";
@@ -254,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EE6438121B1349100DC5648 /* greatestCommonDenominator.swift in Sources */,
 				3EE6437D21B12E4400DC5648 /* editDistance.swift in Sources */,
 				3E2A1F4121AA78880026565F /* Stack.swift in Sources */,
 				3E2E5D3021ACF2030070AAF0 /* Algorithms.swift in Sources */,
@@ -270,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EE6438321B1351100DC5648 /* gcdTests.swift in Sources */,
 				3EE6437F21B12E6F00DC5648 /* editDistanceTests.swift in Sources */,
 				3E2A1F4321AA7B6B0026565F /* StackTests.swift in Sources */,
 				3E2A1F4421AB3C3A0026565F /* HeapTests.swift in Sources */,
