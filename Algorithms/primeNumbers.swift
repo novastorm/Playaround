@@ -20,7 +20,7 @@ extension Algorithms {
         
         for candidate in 3 ... n {
             isPrime = true
-            bounds = Int(Double(n).squareRoot())
+            bounds = Int(Double(candidate).squareRoot())
             for existingPrimeNumber in primeNumbers {
                 guard existingPrimeNumber <= bounds else { break }
                 guard candidate % existingPrimeNumber != 0 else {

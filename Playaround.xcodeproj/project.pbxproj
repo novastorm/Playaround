@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E1A332021C74D9800086CE7 /* justifiedWordWrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A331F21C74D9800086CE7 /* justifiedWordWrap.swift */; };
+		3E1A332221C74EBF00086CE7 /* JustifedWordWrapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A332121C74EBF00086CE7 /* JustifedWordWrapTests.swift */; };
 		3E2A1F4121AA78880026565F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2A1F4021AA78880026565F /* Stack.swift */; };
 		3E2A1F4321AA7B6B0026565F /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2A1F4221AA7B6B0026565F /* StackTests.swift */; };
 		3E2A1F4421AB3C3A0026565F /* HeapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E48EE4E21A4A860001A50A9 /* HeapTests.swift */; };
@@ -22,6 +24,8 @@
 		3E48EE4121A4A85F001A50A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E48EE4021A4A85F001A50A9 /* Assets.xcassets */; };
 		3E48EE4421A4A85F001A50A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E48EE4221A4A85F001A50A9 /* LaunchScreen.storyboard */; };
 		3EBA915C21ACF0E0002537E0 /* TextDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBA915B21ACF0E0002537E0 /* TextDiff.swift */; };
+		3EC3623421BB6FA400DFB1CD /* HashTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC3623321BB6FA400DFB1CD /* HashTable.swift */; };
+		3EC3623621BCF41500DFB1CD /* HashTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC3623521BCF41500DFB1CD /* HashTableTests.swift */; };
 		3EE6437D21B12E4400DC5648 /* editDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE6437C21B12E4400DC5648 /* editDistance.swift */; };
 		3EE6437F21B12E6F00DC5648 /* editDistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE6437E21B12E6F00DC5648 /* editDistanceTests.swift */; };
 		3EE6438121B1349100DC5648 /* greatestCommonDenominator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE6438021B1349100DC5648 /* greatestCommonDenominator.swift */; };
@@ -41,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E1A331F21C74D9800086CE7 /* justifiedWordWrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = justifiedWordWrap.swift; sourceTree = "<group>"; };
+		3E1A332121C74EBF00086CE7 /* JustifedWordWrapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustifedWordWrapTests.swift; sourceTree = "<group>"; };
 		3E2A1F3E21AA33640026565F /* Heap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
 		3E2A1F4021AA78880026565F /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		3E2A1F4221AA7B6B0026565F /* StackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackTests.swift; sourceTree = "<group>"; };
@@ -60,6 +66,8 @@
 		3E48EE4E21A4A860001A50A9 /* HeapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeapTests.swift; sourceTree = "<group>"; };
 		3E48EE5021A4A860001A50A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EBA915B21ACF0E0002537E0 /* TextDiff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDiff.swift; sourceTree = "<group>"; };
+		3EC3623321BB6FA400DFB1CD /* HashTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTable.swift; sourceTree = "<group>"; };
+		3EC3623521BCF41500DFB1CD /* HashTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTableTests.swift; sourceTree = "<group>"; };
 		3EE6437C21B12E4400DC5648 /* editDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editDistance.swift; sourceTree = "<group>"; };
 		3EE6437E21B12E6F00DC5648 /* editDistanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editDistanceTests.swift; sourceTree = "<group>"; };
 		3EE6438021B1349100DC5648 /* greatestCommonDenominator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = greatestCommonDenominator.swift; sourceTree = "<group>"; };
@@ -91,6 +99,7 @@
 			children = (
 				3E2A1F3E21AA33640026565F /* Heap.swift */,
 				3E2A1F4021AA78880026565F /* Stack.swift */,
+				3EC3623321BB6FA400DFB1CD /* HashTable.swift */,
 			);
 			path = AbstractDataTypes;
 			sourceTree = "<group>";
@@ -105,6 +114,7 @@
 				3EE6437C21B12E4400DC5648 /* editDistance.swift */,
 				3EE6438021B1349100DC5648 /* greatestCommonDenominator.swift */,
 				3EE6438421B137CF00DC5648 /* leastCommonMultiple.swift */,
+				3E1A331F21C74D9800086CE7 /* justifiedWordWrap.swift */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -154,6 +164,8 @@
 				3EE6437E21B12E6F00DC5648 /* editDistanceTests.swift */,
 				3EE6438221B1351100DC5648 /* gcdTests.swift */,
 				3EE6438621B137F400DC5648 /* lcmTests.swift */,
+				3EC3623521BCF41500DFB1CD /* HashTableTests.swift */,
+				3E1A332121C74EBF00086CE7 /* JustifedWordWrapTests.swift */,
 			);
 			path = PlayaroundTests;
 			sourceTree = "<group>";
@@ -276,7 +288,9 @@
 				3EE6438521B137CF00DC5648 /* leastCommonMultiple.swift in Sources */,
 				3E48EE3A21A4A85D001A50A9 /* AppDelegate.swift in Sources */,
 				3E2E5D3621AD360F0070AAF0 /* primeNumbers.swift in Sources */,
+				3EC3623421BB6FA400DFB1CD /* HashTable.swift in Sources */,
 				3E2A1F4521AB3C3D0026565F /* Heap.swift in Sources */,
+				3E1A332021C74D9800086CE7 /* justifiedWordWrap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,9 +301,11 @@
 				3EE6438321B1351100DC5648 /* gcdTests.swift in Sources */,
 				3EE6437F21B12E6F00DC5648 /* editDistanceTests.swift in Sources */,
 				3EE6438721B137F400DC5648 /* lcmTests.swift in Sources */,
+				3E1A332221C74EBF00086CE7 /* JustifedWordWrapTests.swift in Sources */,
 				3E2A1F4321AA7B6B0026565F /* StackTests.swift in Sources */,
 				3E2A1F4421AB3C3A0026565F /* HeapTests.swift in Sources */,
 				3E2E5D3821AD39130070AAF0 /* primeNumbersTest.swift in Sources */,
+				3EC3623621BCF41500DFB1CD /* HashTableTests.swift in Sources */,
 				3E2A1F4721ACD3DC0026565F /* LongestCommonSubstringTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

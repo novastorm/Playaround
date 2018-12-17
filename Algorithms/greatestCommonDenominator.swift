@@ -18,6 +18,7 @@ extension Algorithms {
     }
     
     static func greatestCommonDenominator(_ a: Int, _ b: Int, style: GCDHelperStyle = .iterative) -> Int {
+        
         func recursiveHelper(_ a: Int, _ b: Int) -> Int {
             let r = a % b
             if r != 0 {
